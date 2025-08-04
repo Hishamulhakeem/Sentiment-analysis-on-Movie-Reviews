@@ -18,6 +18,8 @@ def preprocess_text(text):
     padded_review = sequence.pad_sequences([encoded_review], maxlen=500)
     return padded_review
 
+#Streamlit
+
 import streamlit as st
 
 st.title('IMDB Movie Review Sentiment Analysis')
@@ -35,5 +37,6 @@ if st.button('Classify'):
     st.write(f'Prediction Score: {prediction[0][0]}')
 else:
     st.write('Please enter a movie review.')
+
 
 
