@@ -23,7 +23,6 @@ import streamlit as st
 
 st.title('IMDB Movie Review Sentiment Analysis')
 st.write('Enter a movie review to classify it as positive or negative.')
-
 user_input = st.text_area('Movie Review')
 
 if st.button('Classify'):
@@ -35,6 +34,7 @@ if st.button('Classify'):
     st.write(f'Prediction Score: {prediction[0][0]}')
 else:
     st.write('Please enter a movie review.')
+
 
 
 
