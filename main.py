@@ -19,7 +19,6 @@ def preprocess_text(text):
     return padded_review
 
 #Streamlit
-
 import streamlit as st
 
 st.title('IMDB Movie Review Sentiment Analysis')
@@ -32,11 +31,11 @@ if st.button('Classify'):
     preprocessed_input=preprocess_text(user_input)
     prediction=model.predict(preprocessed_input)
     sentiment='Positive' if prediction[0][0] > 0.5 else 'Negative'
-
     st.write(f'Sentiment: {sentiment}')
     st.write(f'Prediction Score: {prediction[0][0]}')
 else:
     st.write('Please enter a movie review.')
+
 
 
 
